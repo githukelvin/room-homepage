@@ -1,2 +1,25 @@
 @use "./fonts" as *;
 @use "./colors" as *;
+.bottom{
+    margin-top: -.5em;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    .middle{
+        padding: 4em 3em ;
+        h2{
+            font-family: 'bold';
+            font-size: 1em;
+            color: $Black;
+            text-transform: uppercase;
+            letter-spacing:6.7px;
+        }
+        p{
+            font-family: 'medium';
+            font-size: .95em;
+            line-height: 1.41;
+            color: $DarkGray;
+            padding-top: 1em;
+            margin-top: -.2em;
+        }
+    }
+}
