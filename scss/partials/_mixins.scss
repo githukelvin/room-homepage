@@ -1,0 +1,17 @@
+@use "./fonts" as *;
+@use "./colors" as *;
+
+@mixin btns {
+      $size: 5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $size;
+      height: $size;
+      background: $Black;
+      cursor: pointer;
+
+      &:hover {
+          background: $DarkGray;
+      }
+  }

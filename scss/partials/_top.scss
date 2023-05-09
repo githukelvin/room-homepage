@@ -1,0 +1,87 @@
+/**
+    * Top
+    * -----------------------------------------------------------------------------
+    * Division on Top level styles
+    * 
+    */
+@use "./fonts" as *;
+@use "./colors" as *;
+@use "./mixins" as *;
+.top{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+    .left{
+        position: relative;
+        .navBar {
+            position: absolute;
+            display: flex;
+            align-items: center;
+          nav{
+            display: flex;
+            flex-direction: row;
+            gap: 3.61em;
+            padding: 3.88em ;
+            align-content: center;
+            ul{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1.89em;
+                margin-top: -.5em;
+                li{
+                    a{
+                        color: $White;
+                        font-family: 'medium';
+
+                    }
+                }
+            }
+          }
+        }
+        .img{
+        }
+    }
+    .right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        .text{
+            h1{
+
+            }
+            p{
+
+            }
+
+        } 
+        .button{
+            button{
+
+            }
+            img{
+
+            }
+            
+        } 
+    }
+    .slideBtn{
+        position: absolute;
+        bottom: 7px;
+        display: flex;
+        flex-direction: row;
+      
+
+        .prevBtn{
+            @include btns;
+
+        }
+        .nextBtn{
+            @include btns;
+
+        }
+
+    }
+}

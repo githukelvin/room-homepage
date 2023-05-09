@@ -9,6 +9,7 @@
   list-style: none;
   outline: none;
   border: none;
+  text-decoration: none;
 }
 
 *,
@@ -54,6 +55,81 @@ h6, p {
   font-style: normal;
   font-display: swap;
 }
+/**
+    * Top
+    * -----------------------------------------------------------------------------
+    * Division on Top level styles
+    * 
+    */
+.top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+}
+.top .left {
+  position: relative;
+}
+.top .left .navBar {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.top .left .navBar nav {
+  display: flex;
+  flex-direction: row;
+  gap: 3.61em;
+  padding: 3.88em;
+  align-content: center;
+}
+.top .left .navBar nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.89em;
+  margin-top: -0.5em;
+}
+.top .left .navBar nav ul li a {
+  color: hsl(0, 0%, 100%);
+  font-family: "medium";
+}
+.top .right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+.top .slideBtn {
+  position: absolute;
+  bottom: 7px;
+  display: flex;
+  flex-direction: row;
+}
+.top .slideBtn .prevBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5em;
+  height: 5em;
+  background: hsl(0, 0%, 0%);
+  cursor: pointer;
+}
+.top .slideBtn .prevBtn:hover {
+  background: hsl(0, 0%, 63%);
+}
+.top .slideBtn .nextBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5em;
+  height: 5em;
+  background: hsl(0, 0%, 0%);
+  cursor: pointer;
+}
+.top .slideBtn .nextBtn:hover {
+  background: hsl(0, 0%, 63%);
+}
+
 .all {
   display: flex;
   flex-direction: column;
