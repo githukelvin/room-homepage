@@ -49,16 +49,38 @@
         width: 100%;
         position: relative;
         .text{
+            display: flex;
+            flex-direction:column;
+            gap: 1em;
+            padding: 7.47em 4em 0em 6.28em;
             h1{
+                font-family: 'bold';
+                font-size: 2.69em;
+                line-height: 1.05;
+                color: $Black;
+                padding-bottom: .2em;
 
             }
             p{
+                width: 100%;
+                font-family: 'medium';
+                font-size: .95em;
+                line-height: 1.4;
+                color: $DarkGray;
+                padding-right: 2em;
 
             }
 
         } 
         .button{
+            padding-top: .2em;
             button{
+                all: unset;
+                text-transform: uppercase;
+                color: $Black;
+                font-family: 'semibold';
+                letter-spacing: 11.5px;
+                padding-right: 1em;
 
             }
             img{

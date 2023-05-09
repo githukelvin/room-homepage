@@ -99,6 +99,38 @@ h6, p {
   width: 100%;
   position: relative;
 }
+.top .right .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 7.47em 4em 0em 6.28em;
+}
+.top .right .text h1 {
+  font-family: "bold";
+  font-size: 2.69em;
+  line-height: 1.05;
+  color: hsl(0, 0%, 0%);
+  padding-bottom: 0.2em;
+}
+.top .right .text p {
+  width: 100%;
+  font-family: "medium";
+  font-size: 0.95em;
+  line-height: 1.4;
+  color: hsl(0, 0%, 63%);
+  padding-right: 2em;
+}
+.top .right .button {
+  padding-top: 0.2em;
+}
+.top .right .button button {
+  all: unset;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 0%);
+  font-family: "semibold";
+  letter-spacing: 11.5px;
+  padding-right: 1em;
+}
 .top .slideBtn {
   position: absolute;
   bottom: 7px;
