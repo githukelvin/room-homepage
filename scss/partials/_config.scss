@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,p {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+.container{
+    max-width: 1440px;
+    margin-inline:auto;
+}
