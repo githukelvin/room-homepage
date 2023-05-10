@@ -7,129 +7,146 @@
 @use "./fonts" as *;
 @use "./colors" as *;
 @use "./mixins" as *;
-.divsTop{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    scroll-snap-type: mandatory;
-    overflow-x: scroll;
-    &::-webkit-scrollbar {
-            display: none;
-        }
-
-   
-    .top {
+.wrapper{
+    overflow: hidden;
+    .divsTop {
+            width: 100%;
             display: flex;
             flex-direction: row;
-            width: 100%;
-            .left {
-                position: relative;
+            justify-content: space-between;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            scrollbar-width: 0;
+            transition:  all 0.4s ease;
     
-                .navBar {
-                    position: absolute;
-                    display: flex;
-                    align-items: center;
+            &::-webkit-scrollbar {
+                    display: none;
+                }
     
-                    nav {
+            .top {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                align-items: center;
+    
+                .left {
+                    position: relative;
+    
+                    .navBar {
+                        position: absolute;
                         display: flex;
-                        flex-direction: row;
-                        gap: 3.61em;
-                        padding: 3.88em;
-                        align-content: center;
+                        align-items: center;
     
-                        ul {
+                        nav {
                             display: flex;
                             flex-direction: row;
-                            align-items: center;
-                            gap: 1.89em;
-                            margin-top: -.5em;
+                            gap: 3.61em;
+                            padding: 3.88em;
+                            align-content: center;
     
-                            li {
-                                a {
-                                    color: $White;
-                                    font-family: 'medium';
+                            ul {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 1.89em;
+                                margin-top: -.5em;
     
+                                li {
+                                    a {
+                                        color: $White;
+                                        font-family: 'medium';
+    
+                                    }
                                 }
                             }
                         }
                     }
+    
+                    .img {
+                        width: 840px;
+                        height: 535px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+    
+                    .img1 {
+                        background-image: url("../images/desktop-image-hero-1.jpg");
+                    }
+    
+                    .img2 {
+                        background-image: url("../images/desktop-image-hero-2.jpg");
+    
+                    }
+    
+                    .img3 {
+                        background-image: url("../images/desktop-image-hero-3.jpg");
+    
+                    }
                 }
     
-                .img {
-                    height:100%;
-                }
-            }
-    
-            .right {
-                display: flex;
-                flex-direction: column;
-                width: 600px;
-                position: relative;
-    
-                .text {
+                .right {
                     display: flex;
                     flex-direction: column;
-                    gap: 1em;
-                    padding: 7.47em 4em 0em 6.28em;
+                    width: 600px;
     
-                    h1 {
-                        font-family: 'bold';
-                        font-size: 2.69em;
-                        line-height: 1.05;
-                        color: $Black;
-                        padding-bottom: .2em;
+                    .text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1em;
+                        padding: 7.47em 4em 0em 6.28em;
     
-                    }
+                        h1 {
+                            font-family: 'bold';
+                            font-size: 2.69em;
+                            line-height: 1.05;
+                            color: $Black;
+                            padding-bottom: .2em;
     
-                    p {
-                        width: 100%;
-                        font-family: 'medium';
-                        font-size: .95em;
-                        line-height: 1.4;
-                        color: $DarkGray;
-                        padding-right: 2em;
+                        }
     
-                    }
+                        p {
+                            width: 100%;
+                            font-family: 'medium';
+                            font-size: .95em;
+                            line-height: 1.4;
+                            color: $DarkGray;
+                            padding-right: 2em;
     
-                }
-    
-                .button {
-                    padding-top: .2em;
-    
-                    button {
-                        // all: unset;
-                        background: transparent;
-                        text-transform: uppercase;
-                        color: $Black;
-                        font-family: 'semibold';
-                        letter-spacing: 11.5px;
-                        padding-right: 1em;
+                        }
     
                     }
     
-                 
+                    .button {
+                        padding-top: .2em;
     
-                }
-            }
+                        button {
+                            background: transparent;
+                            text-transform: uppercase;
+                            color: $Black;
+                            font-family: 'semibold';
+                            letter-spacing: 11.5px;
+                            padding-right: 1em;
     
-            .slideBtn {
-                position: absolute;
-                bottom: 7px;
-                display: flex;
-                flex-direction: row;
+                        }
     
     
-                .prevBtn {
-                    @include btns;
     
-                }
-    
-                .nextBtn {
-                    @include btns;
-    
+                    }
                 }
     
+                .slideBtn {
+                    margin-top: 69px;
+                    display: flex;
+                    flex-direction: row;
+    
+                    .prevBtn {
+                        @include btns;
+                    }
+    
+                    .nextBtn {
+                        @include btns;
+                    }
+                }
             }
         }
 }

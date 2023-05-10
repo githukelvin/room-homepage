@@ -11,9 +11,15 @@
   <link rel="preload" href="./fonts/LeagueSpartan-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/LeagueSpartan-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/LeagueSpartan-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-  
+  <script src="https://kit.fontawesome.com/f1deb10f83.js" crossorigin="anonymous"></script>
   <title>Frontend Mentor | Room homepage</title>
+<!-- swiper js -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -23,124 +29,130 @@
 <body>
 <main>
   <div class=" container all">
-    <div class=" divsTop">
-      <!-- First Division -->
-      <div class="top">
-        <div class="left">
-          <div class="navBar">
-            <nav>
-              <div class="logo">
-                <a href=""><img src="./images/logo.svg" alt="logo"></a>
+     <div class="wrapper">
+      <div class=" divsTop">
+        <!-- First Division -->
+        <div class="top">
+      
+      
+          <div class="left">
+            <div class="navBar">
+              <nav>
+                <div class="logo">
+                  <a href=""><img src="./images/logo.svg" alt="logo"></a>
+                </div>
+                <ul>
+                  <li><a href="#">home</a></li>
+                  <li><a href="#">shop</a></li>
+                  <li><a href="#">about</a></li>
+                  <li><a href="#">contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="img img1">
+            </div>
+          </div>
+          <div class="right">
+            <div class="text">
+              <h1>Discover innovative ways to decorate</h1>
+              <p>We provide unmatched quality, comfort, and style for property owners across the country.
+                Our experts combine form and function in bringing your vision to life. Create a room in your
+                own style with our collection and make your property a reflection of you and what you love.</p>
+              <div class="button">
+                <button>Shop now</button>
+                <img src="./images/icon-arrow.svg" alt="arrow">
               </div>
-              <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">shop</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">contact</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="img">
-            <img src="./images/desktop-image-hero-1.jpg" alt="hero image">
-          </div>
-        </div>
-        <div class="right">
-          <div class="text">
-            <h1>Discover innovative ways to decorate</h1>
-            <p>We provide unmatched quality, comfort, and style for property owners across the country.
-              Our experts combine form and function in bringing your vision to life. Create a room in your
-              own style with our collection and make your property a reflection of you and what you love.</p>
-            <div class="button">
-              <button>Shop now</button>
-              <img src="./images/icon-arrow.svg" alt="arrow">
+            </div>
+      
+            <div class="slideBtn">
+              <button id="prev" class="prevBtn btn"><img src="./images/icon-angle-left.svg" alt="left arrow"></button>
+              <button id="next" class="nextBtn btn "><img src="./images/icon-angle-right.svg" alt="right arrow"></button>
             </div>
           </div>
       
-          <div class="slideBtn">
-            <button class="prevBtn"><img src="./images/icon-angle-left.svg" alt="left arrow"></button>
-            <button class="nextBtn"><img src="./images/icon-angle-right.svg" alt="right arrow"></button>
-          </div>
         </div>
-      </div>
-
-      <!-- Second Div -->
-      <div class="top">
-        <div class="left">
-          <div class="navBar">
-            <nav>
-              <div class="logo">
-                <a href=""><img src="./images/logo.svg" alt="logo"></a>
+      
+        <!-- Second Div -->
+        <div class="top">
+      
+          <div class="left">
+            <div class="navBar">
+              <nav>
+                <div class="logo">
+                  <a href=""><img src="./images/logo.svg" alt="logo"></a>
+                </div>
+                <ul>
+                  <li><a href="#">home</a></li>
+                  <li><a href="#">shop</a></li>
+                  <li><a href="#">about</a></li>
+                  <li><a href="#">contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="img img2">
+            </div>
+          </div>
+          <div class="right">
+            <div class="text">
+              <h1>We are available all across the globe</h1>
+              <p>With stores all over the world, it's easy for you to find furniture for your home or place of business.
+                Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
+                store locator. Any questions? Don't hesitate to contact us today.</p>
+              <div class="button">
+                <button>Shop now</button>
+                <img src="./images/icon-arrow.svg" alt="arrow">
               </div>
-              <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">shop</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">contact</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="img">
-            <img src="./images/desktop-image-hero-2.jpg" alt="hero 2 image">
-          </div>
-        </div>
-        <div class="right">
-          <div class="text">
-            <h1>We are available all across the globe</h1>
-            <p>With stores all over the world, it's easy for you to find furniture for your home or place of business.
-            Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
-            store locator. Any questions? Don't hesitate to contact us today.</p>
-            <div class="button">
-              <button>Shop now</button>
-              <img src="./images/icon-arrow.svg" alt="arrow">
+            </div>
+      
+            <div class="slideBtn">
+              <button id="prev" class="prevBtn btn"><img src="./images/icon-angle-left.svg" alt="left arrow"></button>
+              <button id="next" class="nextBtn btn "><img src="./images/icon-angle-right.svg" alt="right arrow"></button>
             </div>
           </div>
       
-          <div class="slideBtn">
-            <button class="prevBtn"><img src="./images/icon-angle-left.svg" alt="left arrow"></button>
-            <button class="nextBtn"><img src="./images/icon-angle-right.svg" alt="right arrow"></button>
-          </div>
         </div>
-      </div>
-      <!-- Third Div -->
-      <div class="top">
-        <div class="left">
-          <div class="navBar">
-            <nav>
-              <div class="logo">
-                <a href=""><img src="./images/logo.svg" alt="logo"></a>
+        <!-- Third Div -->
+        <div class="top">
+      
+          <div class="left">
+            <div class="navBar">
+              <nav>
+                <div class="logo">
+                  <a href=""><img src="./images/logo.svg" alt="logo"></a>
+                </div>
+                <ul>
+                  <li><a href="#">home</a></li>
+                  <li><a href="#">shop</a></li>
+                  <li><a href="#">about</a></li>
+                  <li><a href="#">contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="img img3">
+            </div>
+          </div>
+          <div class="right">
+            <div class="text">
+              <h1>Manufactured with the best materials</h1>
+              <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced technology
+                to ensure that every product is made as perfect and as consistent as possible. With three decades of
+                experience in this industry, we understand what customers want for their home and office.</p>
+              <div class="button">
+                <button>Shop now</button>
+                <img src="./images/icon-arrow.svg" alt="arrow">
               </div>
-              <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">shop</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">contact</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="img">
-            <img src="./images/desktop-image-hero-3.jpg" alt="hero 3 image">
-          </div>
-        </div>
-        <div class="right">
-          <div class="text">
-            <h1>Manufactured with the best materials</h1>
-            <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced technology
-            to ensure that every product is made as perfect and as consistent as possible. With three decades of
-            experience in this industry, we understand what customers want for their home and office.</p>
-            <div class="button">
-              <button>Shop now</button>
-              <img src="./images/icon-arrow.svg" alt="arrow">
+            </div>
+      
+            <div class="slideBtn">
+              <button id="prev" class="prevBtn btn"><img src="./images/icon-angle-left.svg" alt="left arrow"></button>
+              <button id="next" class="nextBtn btn "><img src="./images/icon-angle-right.svg" alt="right arrow"></button>
             </div>
           </div>
       
-          <div class="slideBtn">
-            <button class="prevBtn"><img src="./images/icon-angle-left.svg" alt="left arrow"></button>
-            <button class="nextBtn"><img src="./images/icon-angle-right.svg" alt="right arrow"></button>
-          </div>
         </div>
+        <!-- end -->
       </div>
-      <!-- end -->
-    </div>
+     </div>
     <div class=" bottom">
       <div class="left">
         <img src="./images/image-about-dark.jpg" alt="image about dark">

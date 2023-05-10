@@ -1,18 +1,40 @@
-const prevBtn = [...document.querySelectorAll(".prevBtn")];
-const containers = [...document.querySelectorAll(".top")];
-const nextBtn = [...document.querySelectorAll(".nextBtn")];
+const wrapper = document.querySelector(".wrapper");
+const carousel = document.querySelector(".divsTop");
+const divs = document.querySelectorAll(".top");
+const btns = document.querySelectorAll(".btn");
 
-containers.forEach((item,i)=>{
-   let  cDimesions =item.getBoundingClientRect();
-    let cWidth = cDimesions.width;
-    console.log(nextBtn[i]);
-    
+// console.log(wrapper,carousel,divs,btns)
 
-      prevBtn[i].addEventListener("scroll", () => {
-       item.scrollLeft -= cWidth;        
-      });
-      nextBtn[i].addEventListener("click", () => {
-        // item.scrollLeft += cWidth
-        // alert((item.scrollLeft += cWidth));
-      });
+let divIndex =1;
+let intervalid;
+
+// function to automatic slider
+const autoSlide =()=>{
+  intervalid = setInterval(() => {
+    slideImage(++divIndex)
+  },2000);
+}
+// btn
+btns.forEach((btn)=>{
+  btn.addEventListener("click",(e)=>{
+    clearInterval(intervalid);
+     divIndex +=e.target.id ==="next" ? 1 :-1;
+     slideImage(divIndex)
+     autoSlide();
+  })
 })
+
+// function to update the carousel display to show the specified  
+const slideImage = () => {
+  divIndex = divIndex === divs.length ? 0 : divIndex < 0 ? divs.length -1:divIndex;
+  carousel.style.transform =`translate(-${divIndex * 100}%)`
+};
+// call function
+
+
+autoSlide();
+
+// wrapper
+
+wrapper.addEventListener("mouseover",()=>clearInterval(intervalid))
+wrapper.addEventListener("mouseleave", () => autoSlide());
