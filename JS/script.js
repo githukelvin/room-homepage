@@ -12,7 +12,7 @@ let intervalid;
 const autoSlide =()=>{
   intervalid = setInterval(() => {
     slideImage(++divIndex)
-  },2000);
+  },5000);
 }
 // btn
 btns.forEach((btn)=>{
