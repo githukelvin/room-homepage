@@ -2,7 +2,8 @@ const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".divsTop");
 const divs = document.querySelectorAll(".top");
 const btns = document.querySelectorAll(".btn");
-
+const hams = document.querySelectorAll(".ham");
+const ul = document.querySelectorAll("ul")
 // console.log(wrapper,carousel,divs,btns)
 
 let divIndex =1;
@@ -12,7 +13,7 @@ let intervalid;
 const autoSlide =()=>{
   intervalid = setInterval(() => {
     slideImage(++divIndex)
-  },5000);
+  },3000);
 }
 // btn
 btns.forEach((btn)=>{
@@ -38,3 +39,21 @@ autoSlide();
 
 wrapper.addEventListener("mouseover",()=>clearInterval(intervalid))
 wrapper.addEventListener("mouseleave", () => autoSlide());
+
+
+// mobile
+wrapper.addEventListener("touchover", () => clearInterval(intervalid));
+wrapper.addEventListener("touchleave", () => autoSlide());
+
+
+hams.forEach((btn)=>{
+  btn.addEventListener("click",()=>{
+    document.querySelector(".wrapper").classList.toggle("active");
+    document.querySelector("body").classList.toggle("active")
+    btn.classList.toggle("active")
+     ul.forEach((ul)=>{
+        ul.classList.toggle("active");
+        
+     })
+  })
+})

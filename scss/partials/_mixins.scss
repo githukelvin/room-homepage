@@ -14,4 +14,21 @@
       &:hover {
           background: $DarkGray;
       }
+      @include responsive(400px){
+        $size:3.5em;
+            width: $size;
+            height: $size;
+            img{
+                width:.6em;
+            }
+      }
+
   }
+
+
+//   responsive
+@mixin responsive($breakpoint){
+    @media screen and (max-width:$breakpoint) {
+        @content;
+    }
+}
