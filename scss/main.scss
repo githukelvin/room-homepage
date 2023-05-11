@@ -1,7 +1,11 @@
 @forward "./partials/";
 
+@use "./partials/fonts";
 .all{
     display: flex;
     flex-direction: column;
 // .active
+}
+.attribution{
+    font-family: 'medium';
 }

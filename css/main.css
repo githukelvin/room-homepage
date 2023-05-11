@@ -248,6 +248,20 @@ body.active {
     transform: translateY(0);
   }
 }
+.wrapper .divsTop .top .left .navBar nav ul li {
+  padding-bottom: 0.4em;
+  position: relative;
+}
+.wrapper .divsTop .top .left .navBar nav ul li:hover::after {
+  background: hsl(0, 0%, 100%);
+  content: "";
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  height: 2px;
+  width: 20px;
+  margin-inline: auto;
+}
 .wrapper .divsTop .top .left .navBar nav ul li a {
   color: hsl(0, 0%, 100%);
   font-family: "medium";
@@ -345,6 +359,7 @@ body.active {
 }
 .wrapper .divsTop .top .right .button {
   padding-top: 0.2em;
+  cursor: pointer;
 }
 @media screen and (max-width: 400px) {
   .wrapper .divsTop .top .right .button {
@@ -358,6 +373,13 @@ body.active {
   font-family: "semibold";
   letter-spacing: 11.5px;
   padding-right: 1em;
+  cursor: pointer;
+}
+.wrapper .divsTop .top .right .button button:hover {
+  color: hsl(0, 0%, 63%);
+}
+.wrapper .divsTop .top .right .button:hover img {
+  color: hsl(0, 0%, 63%);
 }
 .wrapper .divsTop .top .slideBtn {
   margin-top: 69px;
@@ -418,4 +440,8 @@ body.active {
 .all {
   display: flex;
   flex-direction: column;
+}
+
+.attribution {
+  font-family: "medium";
 }/*# sourceMappingURL=main.css.map */

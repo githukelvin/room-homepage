@@ -5,7 +5,9 @@ const btns = document.querySelectorAll(".btn");
 const hams = document.querySelectorAll(".ham");
 const ul = document.querySelectorAll("ul")
 // console.log(wrapper,carousel,divs,btns)
-
+[{
+  image:""
+}]
 let divIndex =1;
 let intervalid;
 
